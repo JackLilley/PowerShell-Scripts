@@ -1,4 +1,4 @@
-Get-Content "C:\Users\VA-LS-j.lilley\Desktop\computers.txt"  | ForEach-Object{
+Get-Content "%user-profile%\Desktop\computers.txt"  | ForEach-Object{
 $os_name=$null
 $os_version=$null
 $errorMsg=''
@@ -22,4 +22,4 @@ ComputerName = $_
 OSName = $os_name
 OSVersion = $os_version 
 }} | Select ComputerName,OSName,OSVersion |
-Export-Csv "C:\Users\VA-LS-j.lilley\Desktop\OS_Details.csv" -NoTypeInformation -Encoding UTF8
+Export-Csv "%user-profile%\Desktop\OS_Details.csv" -NoTypeInformation -Encoding UTF8
